@@ -1,0 +1,241 @@
+/*======RESET======*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-size: 100%;
+    border:none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+}
+
+body {
+    background: black; 
+}
+
+/*======CABECALHO======*/
+
+
+header.cabecalho {
+    width: 100%;
+    float: left;
+    padding: 3% 
+}
+
+header h1.icone{
+    font-size: 0px;
+    width: 100px;
+    height: 100px;
+    background: url(/Img/20191110_120009_0000.png) center center/100px no-repeat;
+    margin-top: -10px;
+}
+ 
+/*======MENU======*/
+
+button.btn-menu {
+    width: 56px;
+    height: 56px;
+    border-radius: 150px;
+    background-color: rgba(95, 95, 95, 0.75);
+    float: right;
+    position: relative;
+    top: -75px;
+}
+a.btn-close {
+    font-size: 1.5rem;
+    float: right;
+    color: white;
+    margin-top: 30px;
+    margin-right: 30px;
+    cursor: pointer
+}
+
+nav.menu {
+    display: none;
+    position: fixed;
+    float:right;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    top: 0px;
+    left: 0px;
+    list-style: none;
+}
+
+nav.menu ul {
+    width: 100%;
+    text-align: center;
+    float: right;
+    list-style: none;
+}
+nav.menu li {
+    padding: 5px;
+}
+
+nav.menu li a {
+    font-size: 2em;
+    padding: 1.5% 3%;
+    color:white;
+    text-decoration: none;
+}
+
+nav.menu li a:hover {
+    border-bottom: 1px solid white;
+    background-color: darkgrey;
+}
+ 
+/*======CORPO======*/
+
+div.corpo {
+    width: 100%;
+    height: 200px;
+    text-align:center;
+    padding: 3% 4%;
+    float: left;
+    
+}
+
+div.corpo h1 {
+    font-size: 25pt;
+    letter-spacing: 8px;
+    font-weight: 600;
+    color: white;
+}
+
+div.corpo h2 {
+    font-size: 20pt;
+    letter-spacing: 10px;
+    font-weight: 500;
+    color: white;
+}
+
+/*======SOBRE======*/
+
+div.sobre {
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+    margin-top: 5px;
+    background-color: rgb(0, 0, 0,0.9);
+    box-shadow: 2px 3px 10px 10px rgba(70, 62, 62, 0.75);
+    border-radius: 15px 15px 0 0;
+}
+
+h1#eu {
+    text-align: center;
+    background-color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+div.sobre p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14pt;
+    color: white;
+    padding:5px;
+    text-indent: 15px;
+    text-align: justify;
+}
+
+/*======PORTIFOLIO======*/
+
+div.portifolio {
+    width: 100%;
+    height: 500px;
+    padding: 3% 4%;
+    float: left;
+    background-color: rgb(0, 0, 0,0.9);
+    box-shadow: 2px 3px 10px 10px rgba(70, 62, 62, 0.75);
+}
+
+h1#titulo {
+    text-align: center;
+    background-color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+/*======CONTATO======*/
+
+div.contato {
+    width: 100%;
+    padding: 3% 4%;
+    float: left;
+    background-color: rgb(0, 0, 0,0.9);
+    box-shadow: 2px 3px 10px 10px rgba(70, 62, 62, 0.75);
+}
+
+h1#titulo {
+    text-align: center;
+    background-color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+h2#title {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ ul.contato {
+     width: 100%;
+ }
+ 
+ li {
+     list-style: none;
+     color:white;
+     text-align: center;
+ }
+
+ /*======RODAPE======*/
+
+ footer.rodape {
+    width: 100%;
+    padding: 3% 4%;
+    float: left;
+    background-color:white;
+    text-align: center;
+ }
+
+.icon-rodape a {
+    padding: 10px;
+     margin-right:10px;
+     font-size: 1.5em;
+     color: black;
+ }
+ footer.rodape h1 {
+     margin-top: 10px;
+ }
+
+  /*======MEDIA-SCREEN======*/
+  @media screen and ( min-width: 1366px) {
+    div.corpo h1 {
+        font-size: 40pt;
+        letter-spacing: 20px;
+    } 
+    div.corpo h2 {
+        font-size: 25pt;
+        letter-spacing: 10px;
+    }
+    button.btn-menu {
+        top: -95px;
+    }
+    .corpo h1{
+        position: relative;
+        bottom: 70px;
+    }
+    .corpo h2 {
+        position: relative;
+        bottom: 70px;
+        letter-spacing: 10px;
+    }
+    nav.menu li {
+        padding-top: 10px;
+    }
+  }
