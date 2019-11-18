@@ -58,7 +58,7 @@ nav.menu {
     float:right;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 1);
     top: 0px;
     left: 0px;
     list-style: none;
@@ -83,7 +83,7 @@ nav.menu li a {
 
 nav.menu li a:hover {
     border-bottom: 1px solid white;
-    background-color: darkgrey;
+    
 }
  
 /*======CORPO======*/
