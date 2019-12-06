@@ -24,10 +24,10 @@
             <button class="btn-menu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></button>
             <nav class="menu">
                 <a class="btn-close"><i class="fa fa-times" aria-hidden="true"></i></a>
-                <ul>
-                    <li><a href=".portifolio" target="blank">Portifolio</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Sobre</a></li>
+                <ul class="port">
+                    <li><a href="#titulo"> Portifolio</a></li>
+                    <li><a href="#titulo2">Contato</a></li>
+                    <li><a href="#eu">Sobre</a></li>
                 </ul>
             </nav>
         </header>
@@ -47,10 +47,10 @@
                     para motivar mais pessoas a entrarem nesse mercado tão promissor</p>
             </div>
             <div class="portifolio">
-                <h1 id="titulo" Potifolio>Portfólio</h1>
+                <h1 id="titulo">Portfólio</h1>
             </div>
             <div class="contato">
-                <h1 id="titulo">Contato</h1>
+                <h1 id="titulo2">Contato</h1>
                 <h2 id="title">Entre em contato comigo por um dos contatos abaixo</h2>
                 <ul class="ulcontato">
                     <li>WhatsApp - (11) 9 40657377</li>
@@ -82,6 +82,9 @@
             });
 
             $(".btn-close").click(function () {
+                $(".menu").hide();
+            })
+            $(".port").click(function () {
                 $(".menu").hide();
             })
 
