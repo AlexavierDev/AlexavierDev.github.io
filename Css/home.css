@@ -30,10 +30,10 @@ header h1.icone{
     font-size: 0px;
     width: 100px;
     height: 100px;
-    background: url(/Img/alexlogo.png) center center/100px no-repeat;
     margin-top: -10px;
+    background: url(/Img/alexlogo.png) center center/100px no-repeat;
 }
- 
+    
 /*======MENU======*/
 
 button.btn-menu {
