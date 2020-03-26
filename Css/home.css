@@ -17,6 +17,17 @@ body {
     background: black; 
 }
 
+a{
+    text-decoration: none;
+    color:rgb(80, 80, 201);
+}
+
+a:hover{
+    color: white;
+    transition: 2s;
+    border-bottom: solid 1px white;
+}
+
 /*======CABECALHO======*/
 
 
@@ -31,19 +42,19 @@ header h1.icone{
     width: 100px;
     height: 100px;
     margin-top: -10px;
-    background: url(/Img/alexlogo.png) center center/100px no-repeat;
+    background: url(/Img/alexlogo.png) center center/115px no-repeat;
 }
     
 /*======MENU======*/
 
 button.btn-menu {
-    width: 56px;
-    height: 56px;
-    border-radius: 150px;
+    width: 66px;
+    height: 66px;
+    border-radius: 155px;
     background-color: rgba(95, 95, 95, 0.75);
     float: right;
     position: relative;
-    top: -75px;
+    top: -90px;
 }
 a.btn-close {
     font-size: 1.5rem;
@@ -60,7 +71,7 @@ nav.menu {
     float:right;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0,0.9);
+    background-color: rgb(0, 0, 0,0.9);
     top: 0px;
     left: 0px;
     list-style: none;
@@ -84,9 +95,9 @@ nav.menu li a {
 }
 
 nav.menu li a:hover {
-    border-bottom: 1px solid white;
-    
+    color: gray;
 }
+
  
 /*======CORPO======*/
 
@@ -118,7 +129,6 @@ div.corpo h2 {
 div.sobre {
     width: 100%;
     float: left;
-    padding: 3% 4%;
     margin-top: 5px;
     background-color: rgb(0, 0, 0,0.9);
     box-shadow: 2px 3px 10px 10px rgba(70, 62, 62, 0.75);
@@ -161,11 +171,15 @@ h1#titulo {
     border-radius: 10px;
 }
 
+/*======CARDS========*/
+
+
+
 /*======CONTATO======*/
 
 div.contato {
     width: 100%;
-    padding: 3% 4%;
+    padding: 10px;
     float: left;
     background-color: rgb(0, 0, 0,0.9);
     box-shadow: 2px 3px 10px 10px rgba(70, 62, 62, 0.75);
@@ -196,17 +210,20 @@ h2#title {
  }
 
  /*======RODAPE======*/
+.icon-rodape{
+    padding: 10px;
+}
+
 
  footer.rodape {
     width: 100%;
-    padding: 3% 4%;
-    float: left;
+    float: right;
     background-color:white;
     text-align: center;
  }
 
 .icon-rodape a {
-    padding: 10px;
+     padding: 10px;
      margin-right:10px;
      font-size: 1.5em;
      color: black;
@@ -225,9 +242,6 @@ h2#title {
         font-size: 25pt;
         letter-spacing: 10px;
     }
-    button.btn-menu {
-        top: -95px;
-    }
     .corpo h1{
         position: relative;
         bottom: 70px;
@@ -237,7 +251,6 @@ h2#title {
         bottom: 70px;
         letter-spacing: 10px;
     }
-    nav.menu li {
-        padding-top: 10px;
-    }
-  }
+
+    
+}
