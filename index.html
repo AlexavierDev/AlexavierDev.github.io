@@ -8,76 +8,32 @@
         <meta name="description" content="Site para de divulgaçao de projetos feitos">
         <meta name="keywords" content="Potifolio,Site,projetos,Web,Designer,Desenvolvedor,Front-end">
         <meta name="robots" content="index, follow">
-        <meta name="author" content="Alex xavier">
+        <meta name="author" content="Alexsandro xavier">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/Css/home.css">
         <link rel="icon" href="Img/iconedev.png">
-        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <header class="cabecalho">
-            <a href="index.html">
-                <h1 class="icone">Portifolio Alexavier</h1>
-            </a>
-            <button class="btn-menu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></button>
-            <nav class="menu">
-                <a class="btn-close"><i class="fa fa-times" aria-hidden="true"></i></a>
-                <ul class="port">
-                    <li><a href="#titulo"> Portifolio</a></li>
-                    <li><a href="#titulo2">Contato</a></li>
-                    <li><a href="#eu">Sobre</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav class="nav-bar">
+            <div class="toggle-menu">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="" class="nav-link">Blog Machine Dev</a></li>
+                <li class="nav-list-item"><a href="" class="nav-link">Portfolio</a></li>
+                <li class="nav-list-item"> <a href="" class="nav-link">Contato</a></li>
+                <li class="nav-list-item"><a href="" class="nav-link">Sobre</a></li>
+               
+            </ul>
+        </nav>
 
-
-        <div class="corpo">
-            <h1>Alexsandro Xavier</h1>
-            <h2>Desenvolvedor Web</h2>
+        <div class="section">
+            <h1>Ola! Eu sou Alexsandro Xavier</h1>
+            <p class="p">Desenvolvedor Web</p>
         </div>
-        <article>
-            <div class="sobre">
-                <h1 id="eu">Sobre</h1>
-                <p>Olá me chamo Alexsandro mas eu acho particularmente um nome enorme, então sempre falo que meu nome é
-                    Alex e
-                    também é a forma que todos me conhecem ou acabam me chamando.Sou de São Bernardo do Campo ABC
-                    Paulista e atualmente sou só mesmo estudante e amante de tecnologia,pretendo fazer um curso superior
-                    na área mas ainda decidindo qual ao certo,por enquanto como um bom autodidata vamos estudando por
-                    conta pelos conteúdos que internet nos proporciona.</p>
-                <p> O desejo constante de sempre aprender algo novo e poder evoluir nesse meio é o que da gas para
-                    entregar os melhores serviços e
-                    gerenciar o meu <a href="https://www.instagram.com/alexaviedev/" target="blank">instagram</a> e meu
-                    <a href="https://www.machinedev.com.br/" target="blank">Blog o machine Dev</a> com conteudos diarios
-                    da minha
-                    rotina como Desenvolvedor e conhecimentos gerais da area
-                    para motivar mais pessoas a entrarem nesse mercado tão promissor</p>
-            </div>
-            <div class="portifolio">
-                <h1 id="titulo">Portfólio</h1>
-            </div>
-            <div class="contato">
-                <h1 id="titulo2">Contato</h1>
-                <h2 id="title">Entre em contato comigo por um dos contatos abaixo</h2>
-                <ul class="ulcontato">
-                    <li>WhatsApp - (11) 9 40657377</li>
-                    <li>Instagram - <a target="blank" href="https://www.instagram.com/alexavierdev/">AlexavierDev<a />
-                    </li>
-                    <li>E-mail - alexavier859@gmail.com </li>
-                </ul>
-            </div>
-        </article>
-        <footer class="rodape">
-            <div class="icon-rodape">
-                <a target="blank" href="https://www.instagram.com/alexavierdev/"><i
-                        class="fa fa-instagram fa-lg"></i></a>
-                <a target="blank" href="https://github.com/AlexavierDev"><i class="fa fa-github fa-lg"></i></a>
-                <a target="blank" href="https://www.linkedin.com/in/alexsandro-xavier-541a26189/"><i
-                        class="fa fa-linkedin fa-lg"></i></a>
-            </div>
-            <h1>© Copyright 2019 by Alex Xavier</h1>
-        </footer>
 
 
 
@@ -85,20 +41,30 @@
 
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            $(".btn-menu").click(function () {
-                $(".menu").show();
-            });
-
-            $(".btn-close").click(function () {
-                $(".menu").hide();
-            })
-            $(".port").click(function () {
-                $(".menu").hide();
-            })
-
-        </script>
     </body>
+    <script>
+        const toggleButton = document.querySelector('.toggle-menu');
+        const navBar = document.querySelector('.nav-bar');
+        toggleButton.addEventListener('click', () => {
+            navBar.classList.toggle('toggle');
+        });
+
+
+
+        function typeWrite(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = ' ';
+            textoArray.forEach(function (letra, i) {
+
+                setTimeout(function () {
+                    elemento.innerHTML += letra;
+                }, 150 * i)
+
+            });
+        }
+        const titulo = document.querySelector('p');
+        typeWrite(titulo);
+
+    </script>
 
 </html>
