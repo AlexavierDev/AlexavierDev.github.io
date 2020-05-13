@@ -134,10 +134,64 @@ body{
     }
 }
 
+.sobre{
+  width: 100%;
+  height: 500px;
+  background-color: #192829;
   
+}
+
+.sobre h1{
+  color: black;
+  font-family: 'Lato', sans-serif;
+  text-align: center  ;
+  font-size: 18pt;
+  background-color: white;
+  box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75); 
+  border-radius: 50px;
+}
+
+p{
+  text-indent: 10px;
+  text-align: justify;
+  line-height: 25px;
+  margin:  0 10px 0 ;
+}
+
+.link{
+  text-decoration: none;
+  color: rgb(129, 129, 194);
+}
+
+.link:hover{
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+  transition: ease-in .5s;
+  padding: 0 5px;
+  transform: scale(2.1);
+}
+
+
+.portfolio{
+  width: 100%; height: 100%;
+  background-color: red;
+}
+
+.eu{
+  display: block;
+  margin: 10px auto;
+  width: 250px;
+  height: 250px;
+  background-color: yellow;
+  border-radius: 100%;
+}
 
   
 @media (max-width:500px ){
+    .section #ola{
+     font-size: 0;
+    }
     .section h1{
         top: 250px;
         font-size: 20pt;
@@ -152,6 +206,12 @@ body{
     .nav-bar{
         width: 20rem;
     }
+
+    .sobre{
+      height: 650px;
+    }
+
+ 
 }
 
  
