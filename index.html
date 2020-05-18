@@ -10,7 +10,8 @@
         <meta name="robots" content="index, follow">
         <meta name="author" content="Alexsandro xavier">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="/Css/home.css">
         <link rel="icon" href="Img/iconedev.png">
     </head>
@@ -47,16 +48,34 @@
                 conta pelos conteúdos que internet nos proporciona.
                 O desejo constante de sempre aprender algo novo e poder evoluir nesse meio é o que da gas para
                 entregar os melhores serviços e
-                criar conteudo para meu <a class="link" href="https://www.instagram.com/alexaviedev/" target="blank">instagram</a> e
+                criar conteudo para meu <a class="link" href="https://www.instagram.com/alexaviedev/"
+                    target="blank">instagram</a> e
                 meu
-                <a class="link" href="https://www.machinedev.com.br/" target="blank">Blog o machine Dev</a> com conteudos diarios
+                <a class="link" href="https://www.machinedev.com.br/" target="blank">Blog o machine Dev</a> com
+                conteudos diarios
                 da minha
                 rotina como Desenvolvedor e conhecimentos gerais da area
                 para motivar mais pessoas a entrarem nesse mercado tão promissor</p>
         </div>
         <div class="portfolio">
-
-        </div>
+            <h1>Portfolio</h1>
+            <div class="modal">
+                <div class="modal_content">
+                    <img src="imagens/01.jpg" id="modal_img">
+                </div>
+                <span id="bt_close">&times;</span>
+            </div>
+            <div class="row">
+                <div class="card_img">
+                    <img src="/Img/dashboard.png" class="small_img">
+                </div>
+                <div class="card_img">
+                    <img src="imagens/02.jpg" class="small_img">
+                </div>
+                <div class="card_img">
+                    <img src="imagens/03.jpg" class="small_img">
+                </div>
+            </div>
     </body>
     <script>
 
@@ -83,6 +102,31 @@
         }
         const titulo = document.querySelector('p');
         typeWrite(titulo);
+
+
+
+
+        let imagens = document.querySelectorAll('.small_img');
+        let modal = document.querySelector('.modal');
+        let modalImg = document.querySelector('#modal_img');
+        let btClose = document.querySelector('#bt_close');
+        let srcVal = "";
+
+        for (let i = 0; i < imagens.length; i++) {
+            imagens[i].addEventListener('click', function () {
+
+                srcVal = imagens[i].getAttribute('src');
+                modalImg.setAttribute('src', srcVal);
+                modal.classList.toggle('modal_active');
+            });
+
+        }
+
+
+        btClose.addEventListener('click', function () {
+            modal.classList.toggle('modal_active');
+        });
+
 
     </script>
 
