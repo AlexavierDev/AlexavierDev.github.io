@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    font-family: 'Cairo', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.imagem{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Img/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg) ;
+    background-size: cover; background-position: center;
+}
+
+header{
+    position: absolute;
+    width: 100%; height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*NAVEBAR*/
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 1.5rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #00E676;
+}
+
+
+
+
+/* SECTION,H1,H2,P,FOTO DE PERFIL*/
+
+section{
+    position: relative;
+    top: 200px;
+    background-color:rgba(0, 0, 0, 0.7);
+    width: 100%; height: 300px;
+}
+
+
+h1{
+    margin-left: 10px;
+   
+    color: white;
+    font-size: 50px;
+    font-family: Cairo;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+h2{
+    margin-left: 10px;
+    line-height: 5px;
+    color: white;
+    font-size: 50px;
+    font-family: Cairo;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+p{
+    text-align:justify;
+    margin: 25px 0 0 10px;
+    color: white;
+    font-size: 20px;
+    font-family: Cairo;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.perfil{
+    position: relative;
+    left: 900px; bottom: 220px;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    background-image: url(/Img/profile2.jpg );
+    background-size: cover;
+    background-position: center;
+}
+
+

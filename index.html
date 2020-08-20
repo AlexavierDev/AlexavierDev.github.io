@@ -1,133 +1,51 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="pt-br">
 
     <head>
-        <title>Alexavier</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Site para de divulgaçao de projetos feitos">
         <meta name="keywords" content="Potifolio,Site,projetos,Web,Designer,Desenvolvedor,Front-end">
         <meta name="robots" content="index, follow">
         <meta name="author" content="Alexsandro xavier">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="/Css/home.css">
-        <link rel="icon" href="Img/iconedev.png">
+        <script src="https://kit.fontawesome.com/5487956508.js" crossorigin="anonymous"></script>
+        <script src="/script.js"></script>
+        <link rel="stylesheet" href="/Css/style.css">
+        <title>Alexsandro Xavier</title>
     </head>
 
     <body>
-        <nav class="nav-bar">
-            <div class="toggle-menu">
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-                <div class="line line3"></div>
-            </div>
-            <ul class="nav-list">
-                <li class="nav-list-item"><a href="#" class="nav-link">Blog Machine Dev</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-link">Portfolio</a></li>
-                <li class="nav-list-item"> <a href="#" class="nav-link">Contato</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-link">Sobre</a></li>
-
-            </ul>
-        </nav>
-
-        <div class="section">
-            <h1><span id="ola">Ola Eu sou </span>Alexsandro Xavier</h1>
-            <p class="p">Desenvolvedor Web</p>
-        </div>
-
-        <div class="sobre">
-            <h1>Sobre Mim</h1>
-            <div class="eu"></div>
-            <p>Olá me chamo Alexsandro mas eu acho particularmente um nome enorme, então sempre falo que meu nome é
-                Alex e
-                também é a forma que todos me conhecem ou acabam me chamando.Sou de São Bernardo do Campo ABC
-                Paulista e atualmente sou só mesmo estudante e amante de tecnologia,pretendo fazer um curso superior
-                na área mas ainda decidindo qual ao certo,por enquanto como um bom autodidata vamos estudando por
-                conta pelos conteúdos que internet nos proporciona.
-                O desejo constante de sempre aprender algo novo e poder evoluir nesse meio é o que da gas para
-                entregar os melhores serviços e
-                criar conteudo para meu <a class="link" href="https://www.instagram.com/alexaviedev/"
-                    target="blank">instagram</a> e
-                meu
-                <a class="link" href="https://www.machinedev.com.br/" target="blank">Blog o machine Dev</a> com
-                conteudos diarios
-                da minha
-                rotina como Desenvolvedor e conhecimentos gerais da area
-                para motivar mais pessoas a entrarem nesse mercado tão promissor</p>
-        </div>
-        <div class="portfolio">
-            <h1>Portfolio</h1>
-            <div class="modal">
-                <div class="modal_content">
-                    <img src="imagens/01.jpg" id="modal_img">
+        <div class="imagem"></div>
+        <header>
+            <nav class="nav">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#">Alexavier < / ></a>
+                    </div>
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="navlinks">
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Sobre</a></li>
+                        </ul>
+                    </div>
+                    <span class="navTrigger">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
                 </div>
-                <span id="bt_close">&times;</span>
-            </div>
-            <div class="row">
-                <div class="card_img">
-                    <img src="/Img/dashboard.png" class="small_img">
-                </div>
-                <div class="card_img">
-                    <img src="imagens/02.jpg" class="small_img">
-                </div>
-                <div class="card_img">
-                    <img src="imagens/03.jpg" class="small_img">
-                </div>
-            </div>
-    </body>
-    <script>
-
-
-
-        const toggleButton = document.querySelector('.toggle-menu');
-        const navBar = document.querySelector('.nav-bar');
-        toggleButton.addEventListener('click', () => {
-            navBar.classList.toggle('toggle');
-        });
-
-
-
-        function typeWrite(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            elemento.innerHTML = ' ';
-            textoArray.forEach(function (letra, i) {
-
-                setTimeout(function () {
-                    elemento.innerHTML += letra;
-                }, 150 * i)
-
-            });
-        }
-        const titulo = document.querySelector('p');
-        typeWrite(titulo);
-
-
-
-
-        let imagens = document.querySelectorAll('.small_img');
-        let modal = document.querySelector('.modal');
-        let modalImg = document.querySelector('#modal_img');
-        let btClose = document.querySelector('#bt_close');
-        let srcVal = "";
-
-        for (let i = 0; i < imagens.length; i++) {
-            imagens[i].addEventListener('click', function () {
-
-                srcVal = imagens[i].getAttribute('src');
-                modalImg.setAttribute('src', srcVal);
-                modal.classList.toggle('modal_active');
-            });
-
-        }
-
-
-        btClose.addEventListener('click', function () {
-            modal.classList.toggle('modal_active');
-        });
-
-
-    </script>
-
+            </nav>
+              
+        </header>
+        <section>
+            <h1>Alexsandro Xavier</h1>
+            <h2>Desenvolvedor Front-end</h2>
+            <p> Mais conhecido como Alex tenho 20 anos nascido e criado em SP, amante de tecnologia e<br> programação
+                comecei no meio do Desenvolvimento Web e nele estou dando os primeiros<br> passos.Nesse site é onde
+                mostro todos
+                projetos criados e minha evolução na carreira
+            </p>
+            <div class="perfil"></div>
+        </section>
 </html>
