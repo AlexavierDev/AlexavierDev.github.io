@@ -1,8 +1,6 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "menu") {
-        x.className += "responsive";
-    } else {
-        x.className = "menu";
-    }
-}
+$(document).ready(function(){
+    $(".hamburger").click(function(){
+        $(this).toggleClass("active");
+        $(".menu").toggleClass("active");
+    });
+});

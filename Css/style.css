@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap');
 
+::-webkit-scrollbar { 
+    display: none; 
+}
 *{
     margin: 0;
     padding: 0;
@@ -23,19 +26,69 @@ a {
 }
 
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 999;
     width: 100%;
     height: 60px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    
 
     background-color:#101010ee;
     box-shadow: 0px 5px 20px #000000;
 }
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: 0 auto ;
+  
+}
+
+.hamburger{
+    width: 30px; height: 30px;
+
+    background-color:transparent;
+    border-radius: 5px;
+    border: 0;
+
+    position: relative;
+    cursor:pointer;
+
+    display: none;
+}
+
+.hamburger::after{
+    content: "";
+
+    position: absolute;
+    top: 35%; left: 15%;
+
+    width: 70%; height:5%;
+    border-radius: 5px;
+
+    background-color: #fff;
+}
+
+.hamburger::before{
+    content: "";
+
+    position: absolute;
+    top: 55%; left: 15%;
+
+    width: 70%; height: 5%;
+    border-radius: 5px;
+
+    background-color: #fff;
+}
+
+
+
+
+
 
 .logo a {
     font-size: 1.9rem;
@@ -48,6 +101,7 @@ header{
 .menu{
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .menu li a {
@@ -63,6 +117,7 @@ header{
 
 .menu li a:hover{
     background-color: rgba(250, 246, 246, 0.493);
+    transition: .5s ease;
 }
 
 
@@ -118,3 +173,24 @@ section p {
 }
     
 
+@media screen and (max-width:600px){
+    .hamburger {
+        display: block;
+        z-index: 999;
+    }
+    .menu{
+        position:fixed;
+        top: 0; right: 0;
+        height: 100vh; width: 100%;
+        padding: 100px 20px;
+        margin: 0;
+
+        background-color: #222;
+
+        flex-direction: column;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+}
