@@ -1,6 +1,11 @@
-$(document).ready(function(){
-    $(".hamburger").click(function () {
-        $(this).toggleClass("active");
-        $(".menu").toggleClass("active");
-    });
-});
+let show = false 
+
+const menuSection = document.querySelector(".menu-section")
+const menutoggle = menuSection.querySelector(".menu-toggle")
+
+menutoggle.addEventListener("click", () =>{
+    menuSection.classList.toggle("on", show)
+
+    show = !show
+    
+})

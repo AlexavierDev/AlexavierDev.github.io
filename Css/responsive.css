@@ -1,0 +1,88 @@
+
+    /*MEDIA QUERIE MOBILE L*/
+@media (max-width: 425px) {
+    nav {
+        display: none;
+    }
+  
+    div.logo a{
+      letter-spacing: 1px;
+    }
+
+    /*MENU HAMBURGER*/
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+        transition: 2s ease;
+    }
+  
+    .one,
+    .two,
+    .three {
+        background-color: #fff;
+        border-radius: 10px;
+        height: 5px;
+        width: 100%;
+        margin: 5px auto;
+        transition: 0.5s ease;
+    }
+    /*FIM MENU HAMBURGER*/
+    
+    /*NAVEGAÇAO FULLSCREEN*/
+     div.menu-section.on {
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      background-color: #2A1A1F;
+  
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: 0.5s ease-in;
+    }
+  
+    div.menu-section.on .menu-toggle {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+    }
+  
+    div.menu-section.on nav {
+      display: block;
+    }
+  
+    .menu-section.on nav ul {
+      text-align: center;
+      display: block;
+  }
+  
+  .menu-section.on nav ul li a {
+      font-size: 30px;
+      display: block;
+      margin: 20px 0;
+  }
+  
+  div.menu-section.on div.menu-toggle div.one{
+      transform: rotate(45deg) translate(14px);
+      transition: 0.5s ease;
+  }
+  
+  div.menu-section.on div.menu-toggle div.two{
+    opacity: 0;
+    
+  }
+  
+  div.menu-section.on div.menu-toggle div.three{
+    transform: rotate(-45deg) translate(15px);
+    transition: 0.5s ease;
+  }
+  /*FIM MENU NAVEGAÇAO FULLSCREEN*/
+
+}

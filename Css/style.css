@@ -1,21 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600&display=swap');
 
-::-webkit-scrollbar { 
-    display: none; 
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a {
-    font-family: 'Cairo', sans-serif;
-    color: white;
-    text-decoration: none;
-}
-
-.imagem{
+/*Background da Primeira parte*/
+div.background1{
    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.9)),url(/Img/background.jpg);
    background-position: center center;
    background-size: cover;
@@ -25,211 +17,87 @@ a {
    height:100vh;
 }
 
-header{
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-    height: 60px;
+/*HEADER CONTAINER NAV UL LI A LOGO*/
 
-    
+header {
+  position: fixed;
+  top:0;
 
-    background-color:#101010ee;
-    box-shadow: 0px 5px 20px #000000;
+  padding: 20px;
+  width: 100%;
+
+  background-color: rgba(0,0,0,0.9);
 }
 
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    max-width: 1200px;
-    margin: 0 auto ;
+  width: 100%;
+  max-width: 980px;
+  
+  margin: 0 auto;
+}
+
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px; 
+  padding: 0 20px;
   
 }
 
-.hamburger{
-    width: 30px; height: 30px;
-
-    background-color:transparent;
-    border-radius: 5px;
-    border: 0;
-
-    position: relative;
-    cursor:pointer;
-
-    display: none;
-}
-
-.hamburger::after{
-    content: "";
-
-    position: absolute;
-    top: 35%; left: 15%;
-
-    width: 70%; height:5%;
-    border-radius: 5px;
-
-    background-color: #fff;
-}
-
-.hamburger::before{
-    content: "";
-
-    position: absolute;
-    top: 55%; left: 15%;
-
-    width: 70%; height: 5%;
-    border-radius: 5px;
-
-    background-color: #fff;
+header nav ul li a:hover{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
+  transition: 0.5s ease;
 }
 
 
-
-
-
-
-.logo a {
-    font-size: 1.9rem;
-    font-weight: lighter;
-    letter-spacing: 3px;
-    
-    margin-left: 10px;
+div.logo a{
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  font-size: 30px;
+  color: white;
 }
 
-.menu{
-    display: flex;
-    align-items: center;
-
-    list-style: none;
-}
-
-.menu li a {
-    margin-left: 20px;
-    padding: 10px 10px 10px 10px;
-    display:block;
-
-    font-size: 1.5rem;
-    font-weight: lighter;
-
-    border-radius: 10px;
-}
-
-.menu li a:hover{
-    background-color: rgba(250, 246, 246, 0.493);
-    transition: .5s ease;
-}
+/*FIM HEADER CONTAINER NAV UL LI A*/
 
 
-section{
-    position: relative;
-    bottom: 350px;
-
-   
-    width: 100%; height: auto;
-}
-
-section h1 {
-    margin-left: 10px;
-
-    line-height: 5px;
-    color: white;
-    font-size: 50px;
-    font-family: Cairo;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: 5px;
-}
-
-section h2 {
-    margin-left: 10px;
-
-    color: white;
-    font-size: 50px;
-    font-family: Cairo;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-section p {
-    width: 800px;
-    text-align:justify;
-    margin: 0px 0 0 10px;
-    color: white;
-    font-size: 20px;
-    font-family: Cairo;
-    font-style: normal;
-    font-weight: 300;
-}
-
-.perfil{
-    position: absolute;
-    left: 900px; bottom: 10px;
-    width: 250px; height: 250px;
-    border-radius: 50%;
-    background-image: url(/Img/profile2.jpg );
-    background-size: cover;
-    background-position: center;
-}
-    
-
-@media screen and (max-width:980px){
-    .hamburger {
-        display: block;
-        z-index: 999;
-    }
-    .menu{
-        position:fixed;
-        top: 0; right: -100%;
-
-        height: 100vh; width: 100%;
-        max-width: 250px;
-        padding: 100px 20px;
-        margin: 0;
-
-        background-color: #222;
-        
-        transition: .5s ease;    
-        box-shadow: 0px 1px 15px #999999;
-        flex-direction: column;
-    }
-
-     .menu.active {
-        right: 0;
-    }
-
-    section{
-        margin-top: 100px;
 
 
-    }
 
-    section h1{
-        font-size: 29px;
-        text-align: center;
-        letter-spacing: 5px;
-    }
 
-    section h2 {
-        font-size: 20px;
-        text-align: center;
-        letter-spacing: 2px;
-        margin: 5px 30px;
-    }
 
-    section p {
-        width: 300px;
 
-        font-size: 15px;
-        text-align:justify; 
-        padding: 10px;
-    }
 
-    .perfil{
-        width: 200px; height: 200px;
-        bottom: 300px;
-        left: 60px;
-    }
-}
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
